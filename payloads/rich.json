@@ -1,0 +1,11 @@
+{
+    "aps": {
+        "alert": {
+            "body": "Push notification body",
+            "title": "Push notification title"
+        },
+        "mutable-content": 1,
+        "category": "rich-apns"
+    },
+    "media-url": "https://i.imgur.com/t4WGJQx.jpg"
+}

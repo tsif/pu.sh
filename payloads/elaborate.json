@@ -1,0 +1,4 @@
+{
+    "aps" : { "alert" : "Message received from Bob" },
+    "acme2" : [ "bang",  "whiz" ]
+}
