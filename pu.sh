@@ -29,10 +29,12 @@ claims=$(printf '{ "iss": "%s", "iat": %d }' "$TEAMID" "$time" | base64URLSafe)
 jwt="$header.$claims.$(sign $header.$claims)"
 
 # Development server: api.sandbox.push.apple.com:443
-#
-# Production server: api.push.apple.com:443
-
 ENDPOINT=https://api.sandbox.push.apple.com:443
+# 
+# Production server: api.push.apple.com:443
+# Uncomment URL below to send pushes to production server
+# ENDPOINT=https://api.push.apple.com:443
+# 
 URLPATH=/3/device/
 
 URL=$ENDPOINT$URLPATH$DEVICETOKEN

@@ -93,6 +93,15 @@ After you clone the script you need to supply your own info within the script:
 - BUNDLEID: The bundle id of your app
 - DEVICETOKEN: A device token you have obtained
 
+## Usage
+
+After you set up data, you can just execute script to send test push notification:
+
+```bash
+chmod +x pu.sh
+./pu.sh
+```
+
 ## Troubleshooting
 
 Unfortunately, the feedback returned from APNS when something goes wrong leaves a lot to be desired. These are the status codes that are possible to be returned and are shown in the output of the previous script.
