@@ -102,6 +102,21 @@ chmod +x pu.sh
 ./pu.sh
 ```
 
+### Background Updates
+
+For sending background updates (when the payload's `aps` dictionary includes
+the `content-available` key with a value of `1`), the following headers need to
+be set in the script itself:
+
+```
+apns-priority: 5
+apns-push-type: background
+```
+
+See [Sending Notification Requests to APNs][sending-notification-requests-to-apns] for more details.
+
+[sending-notification-requests-to-apns]: https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/sending_notification_requests_to_apns/
+
 ## Troubleshooting
 
 Unfortunately, the feedback returned from APNS when something goes wrong leaves a lot to be desired. These are the status codes that are possible to be returned and are shown in the output of the previous script.
